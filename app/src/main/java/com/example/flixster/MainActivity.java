@@ -1,6 +1,7 @@
 package com.example.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // setting to dark mode
+        AppCompatDelegate.setDefaultNightMode(
+                AppCompatDelegate.MODE_NIGHT_YES);
+
         setContentView(R.layout.activity_main);
         RecyclerView rvMovies = findViewById(R.id.rvMovies);
 

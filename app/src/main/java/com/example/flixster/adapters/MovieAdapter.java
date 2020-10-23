@@ -67,7 +67,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById((R.id.tvOverview));
             ivPoster = itemView.findViewById(R.id.ivPoster);
-//            Glide.with(context).load("https://drive.google.com/file/d/1H5X3a7iua-gr_3CU3VFN4RACJWYEa5u4/view?usp=sharing").placeholder(R.drawable.@Nullable ).into(ivPoster);
         }
 
         public void bind(Movie movie){
