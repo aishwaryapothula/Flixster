@@ -19,6 +19,8 @@ import com.bumptech.glide.Glide;
 import com.example.flixster.Models.Movie;
 import com.example.flixster.R;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
@@ -65,6 +67,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById((R.id.tvOverview));
             ivPoster = itemView.findViewById(R.id.ivPoster);
+//            Glide.with(context).load("https://drive.google.com/file/d/1H5X3a7iua-gr_3CU3VFN4RACJWYEa5u4/view?usp=sharing").placeholder(R.drawable.@Nullable ).into(ivPoster);
         }
 
         public void bind(Movie movie){
@@ -72,15 +75,17 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             tvOverview.setText(movie.getOverview());
             String imageUrl;
             // If phone is in landscape, set imageurl to wider image vice-versa
+            //trying for default placeholder image
+
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
                 imageUrl = movie.getBackdropPath();
-                
+
             } else{
 
                 imageUrl = movie.getPosterPath();
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            Glide.with(context).load(imageUrl).placeholder(R.mipmap.ic_launcher).into(ivPoster);
         }
     }
 }
