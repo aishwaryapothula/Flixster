@@ -1,3 +1,6 @@
+
+// Parsing is done here
+
 package com.example.flixster.Models;
 
 import org.json.JSONArray;
@@ -9,6 +12,7 @@ import java.util.List;
 
 public class Movie
 {
+    String backdropPath;
     String postPath;
     String title;
     String overview;
@@ -16,6 +20,8 @@ public class Movie
     // If any of the below fail in fetching the JSONException handler handles
     public Movie(JSONObject jsonObject) throws JSONException
     {
+        backdropPath = jsonObject.getString("backdrop_path");
+        // we need to generate a new getter  at the end
         postPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("title");
         overview = jsonObject.getString("overview");
@@ -34,9 +40,14 @@ public class Movie
     }
 
     // Path in the results is only a relative path, we need a full path
-    public String getPostPath()
+    public String getPosterPath()
     {
         return String.format("https://image.tmdb.org/t/p/w342/%s", postPath);
+    }
+
+    public String getBackdropPath()
+    {
+        return String.format("https://image.tmdb.org/t/p/w342/%s", backdropPath);
     }
 
     public String getTitle()
