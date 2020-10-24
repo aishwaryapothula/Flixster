@@ -24,10 +24,10 @@ Here's my [ working log ]( https://docs.google.com/document/d/1xoBIiz3JlWGRPyfQ9
 
 ## Video Walkthrough
 Here's a walkthrough of implemented user stories
-![]()
+![](Images/Flixter.gif)
 
 
 GIF created with Liceecap
 
 ## Notes
-
+While creating new 'android resource directory', choosing the **Orientation** and clicking on **>>**, takes me to the option of UI mode (field below). So I had to clicked on the 'Ratio' (field above) inorder to choose an Orientation.
