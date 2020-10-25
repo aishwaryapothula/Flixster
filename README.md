@@ -1,33 +1,32 @@
-# Flixster App - Week1 Assignment for CodePath
+# Flix
+Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-**Flixter** is an android app that shows to the users all the english movies playing in the theatres now
+---
 
-Submitted by: Aishwarya Pothula
+## Flix Part 1
 
-Time spent: 15 hours spent in total
+### User Stories
 
-##User Stories
-The following **required** functionality is completed:
+#### REQUIRED (10pts)
+- [x] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
 
-* [ ] User can **view a list of movies** now playing in the threates. Data is brought using the MovieDB API
-* [ ] User can perform **vertical scroll** enabled by using Recyler view
+#### BONUS
+- [x] (2pts) Views should be responsive for both landscape/portrait mode.
+   - [x] (1pt) In portrait mode, the poster image, title, and movie overview is shown.
+   - [x] (1pt) In landscape mode, the rotated alternate layout should use the backdrop image instead and show the title and movie overview to the right of it.
 
-The following **additional** features are implemented
+- [x] (2pts) Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
+- [x] (2pts) Improved the user interface by experimenting with styling and coloring.
+- [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
 
-* [ ] The app adjust the view to both **potrait** and **landscape** modes
-* [ ] The app has a **dark theme** now
-* [ ] A **placeholder image** (android picture) is in place to be rendered before a movie poster loads
+### App Walkthough GIF
 
-## Working Log
-Here's my [ working log ]( https://docs.google.com/document/d/1xoBIiz3JlWGRPyfQ9M7uWgfHPHodwiYug36crah_AGg/edit#bookmark=id.pnfzuxpcuy6t ) while implementing the app 
+<img src= Images/Flixter.gif width=250><br>
 
-
-## Video Walkthrough
-Here's a walkthrough of implemented user stories
-![](Images/Flixter.gif)
-
-
-GIF created with Liceecap
-
-## Notes
+### Notes
 While creating new 'android resource directory', choosing the **Orientation** and clicking on **>>**, takes me to the option of UI mode (field below). So I had to clicked on the 'Ratio' (field above) inorder to choose an Orientation.
+
+### Open-source libraries used
+
+- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Androids
