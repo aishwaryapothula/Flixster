@@ -2,8 +2,37 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="#FFFFFF"
+        android:translationZ="90dp">
+
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="61dp"
+            android:layout_height="47dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/play"
+            android:translationZ="90dp"
+            android:visibility="visible" />
+
+
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/ivPoster"
@@ -17,6 +46,7 @@
 
     <TextView
         android:id="@+id/tvTitle"
+
         android:layout_width="257dp"
         android:layout_height="37dp"
         android:layout_alignParentTop="true"
@@ -24,7 +54,9 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:textSize="24sp"
-        tools:text="Mulan" />
+        tools:text="Mulan"
+        android:transitionName="profile"/>
+<!--    android:transitionName="profile"-->
 
     <TextView
         android:id="@+id/tvOverview"
