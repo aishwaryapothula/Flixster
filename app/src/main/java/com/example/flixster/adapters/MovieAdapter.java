@@ -80,7 +80,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             tvOverview = itemView.findViewById((R.id.tvOverview));
             ivPoster = itemView.findViewById(R.id.ivPoster);
             container = itemView.findViewById(R.id.container);
-//            flView = itemView.findViewById(R.id.flView);
+            flView = itemView.findViewById(R.id.flView);
         }
 
         public void bind(final Movie movie){
@@ -89,12 +89,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             String imageUrl;
             // If phone is in landscape, set imageurl to wider image vice-versa
             //trying for default placeholder image
-            if((float)movie.getRating() > 5.0f)
+
+            if(movie.getRating() < 5.0F)
             {
-                flView.setVisibility(flView.VISIBLE);
+                flView.setVisibility(flView.GONE);
             }
             else{
-                    flView.setVisibility(flView.GONE);
+                flView.setVisibility(flView.VISIBLE);
             }
 
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -107,6 +108,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             }
             int radius = 30;
             Glide.with(context).load(imageUrl).transform(new RoundedCorners(radius)).placeholder(R.mipmap.ic_launcher).into(ivPoster);
+
 
             // 1.Register click listener on the whole row
             // For that we need to get a reference to the container having movie poster and over view which is item.xml
