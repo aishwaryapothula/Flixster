@@ -91,7 +91,7 @@ public class DetailActivity extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d("DetailActivity", "onInitializationSuccess");
                 // do any work here to cue video, play video, etc.
-                if ((float)rating <= 5.0f)
+                if ((float)rating > 5.0f)
                 {
                     youTubePlayer.loadVideo(youtubeKey);
                 }

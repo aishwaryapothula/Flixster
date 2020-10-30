@@ -89,14 +89,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             String imageUrl;
             // If phone is in landscape, set imageurl to wider image vice-versa
             //trying for default placeholder image
-//            if((float)movie.getRating() > 6.0f)
-//            {
-//                flView.setVisibility(flView.VISIBLE);
-//            }
-//            else
-//                {
-//                    flView.setVisibility(flView.GONE);
-//            }
+            if((float)movie.getRating() > 5.0f)
+            {
+                flView.setVisibility(flView.VISIBLE);
+            }
+            else{
+                    flView.setVisibility(flView.GONE);
+            }
 
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
